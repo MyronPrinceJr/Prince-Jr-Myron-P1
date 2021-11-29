@@ -62,7 +62,6 @@
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Interface" sap:VirtualizedContainerService.HintSize="615.2,1404.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -101,7 +100,7 @@
               <InArgument x:TypeArguments="x:Boolean">True</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="496.8,295.2" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Select what you'd like to do" OptionsString="Add Customer;Buy From Stores;See Expense Report;Exit" Title="Menu">
+          <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="496.8,295.2" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Select what you'd like to do" OptionsString="Add Customer;Buy From Stores;See Expense Report;Email;Exit" Title="Menu">
             <ui:InputDialog.Result>
               <OutArgument x:TypeArguments="x:String">[userinput]</OutArgument>
             </ui:InputDialog.Result>
@@ -127,7 +126,11 @@
                 <scg:Dictionary x:TypeArguments="x:String, Argument" />
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <x:Null x:Key="" />
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" x:Key="Email" DisplayName="Invoke Email Automation workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Email Automation.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
             <Assign x:Key="Exit" sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_3">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Boolean">[repeat]</OutArgument>
