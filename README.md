@@ -1,12 +1,36 @@
-# p1
-This project entails creating a robotic shopping assitant that will take a customer shopping list and purchase the different items from two different websites.
-The first website will be a website that was created and the second website will be the pega test site provided to the associates at Revature.
-Once the robot has finished shopping for the items specified, a recipt is printed and the inforamtion from the shopping trip will be exported to an excel fiile and then finally emailed to the client.
-This project will include:
-  HTML
-  CSS
-  Web Automation
-  Email Automation
-  Excel Autoamtion
-  Data Scrapping
-  Exporting/Filtering Information
+# P1 Project Specs
+***
+# Robotic Shopping Assistant 2.0
+Say hello to RoSA 2.0. Your robot shopping assistant! Helping you with your client's groceries. 
+
+***
+
+## MVP Functionalities
+- [ ] Robot should be able to take client shopping lists and place orders on the appropriate vendors
+- [ ] Robot should record the total expense of each shopping trip for each client
+- [ ] Robot should be able to record any items that were out of stock or not found
+- [ ] Robot should be able to add clients to the existing client list and take in their shopping order
+- [ ] Robot should shop from at least 2 vendors
+- [ ] One of the vendors should be [Pega](https://training.openspan.com/login)
+- [ ] The other vendor should be a self made shop using HTML, CSS, and JS
+
+## Stretch Goals
+- [ ] Sending emails to clients about their shopping order
+- [ ] Notify clients about vendor discounts/sales
+- [ ] Any other extra features that would improve UX
+- [ ] Send client expense report in excel format
+- [ ] Personal shop gives you some form of receipt after purchase
+- [ ] Shopping groups for clients based on some schedule
+
+## Constraints
+- [ ] Client information should be stored in a DB
+- [ ] Vendor information should be stored in a webpage
+- [ ] Expense Reports should be stored in a DB
+- [ ] Automations should have exception handling enabled
+- [ ] DB tables should be 3NF
+
+
+## Tech Stack
+- UiPath Studio
+- PostgreSQL/SQL Server 
+- HTML, CSS, JS
